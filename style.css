@@ -10,9 +10,9 @@ body, #container, .main-text {
     position: relative;
 }
 
-.image-1{background-image: url("flex.jpg");}
-.image-2{background-image: url("item.jpg");}
-.image-3{background-image: url("item2.jpg");}
+.image-1{background-image: url("images/flex.jpg");}
+.image-2{background-image: url("images/item.jpg");}
+.image-3{background-image: url("images/item2.jpg");}
 
 .slide {
     background-position: center;
