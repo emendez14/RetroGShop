@@ -24,30 +24,32 @@ let systemsCollection = document.querySelectorAll("#collection"),
     // menu button LOGIC
 menuIcon.addEventListener("click", function(){
     subNav.classList.add("open");
-    subNav.style.display = "block";
     subNav.classList.remove("closed");
 });
 
 closeBtn.addEventListener("click", function(){
-    subNav.classList.add("closed");
-    subNav.style.display = "none";
     subNav.classList.remove("open");
+    subNav.classList.add("closed");
 });
 
 function loadEventListeners(){
     systemsInput.addEventListener("keyup", filterSystems)
-}
+};
 
 loadEventListeners();
 
 function filterSystems(e){
-    let text = e.target.value;
+    let text = e.target.value.toLowerCase();
 
     document.querySelectorAll(".item").forEach(function(system){
         let item = system.firstChild.textContent;
-        if(item.indexOf(text) != -1){
+        if(item.toLowerCase().indexOf(text) != -1){
             system.style.display = "block";
         } else {
+            system.style.display = "none";
+        }
+
+        if(systemsInput.value === ''){
             system.style.display = "none";
         }
     });

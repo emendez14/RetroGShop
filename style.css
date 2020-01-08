@@ -4,7 +4,7 @@
       overflow-x: hidden;
   }
   
-  #container, .slide, .main-text {
+  #container, .main-text {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -34,15 +34,31 @@
     color: white;
 }
 
-#item-searcher input {
+#item-container {
     position: absolute;
     left: 50%;
     top: 25%;
     transform: translateX(-50%);
+}
+
+#item-searcher input {
     width: 300px;
     border: black solid 1px;
     padding: 10px;
-    z-index: 1;
+}
+
+#collection {
+    padding: 0;
+    margin-top: 0;
+}
+
+#collection .item {
+    list-style-type: none;
+    width: 300px;
+    border: black solid 1px;
+    padding: 10px;
+    background-color: white;
+    display: none;
 }
 
 .arrow {
@@ -69,6 +85,11 @@
     margin-right: 25px;
 }
 
+#menu {
+    background-color: black;
+    color: white;
+}
+
 .nav-menu-items {
     display: flex;
     flex-direction: row;
@@ -89,6 +110,7 @@
     width: 35px;
     height: 5px;
     background-color: black;
+    border: 2px solid white;
     margin: 6px 0;
 }
 
@@ -97,27 +119,54 @@
     position: fixed;
     z-index: 1;
     margin: 10px;
+
+    transition: all .5s ease-in;
+}
+
+.menu-icon:hover {
+    background-color: white;
+    border: 2px solid black;
+    transition: all .5s ease-in;
 }
 
 #sub-nav {
     background-color: black;
     opacity: .9;
     position: fixed;
-    top: 8%;
-    display: none;
+}
+
+#sub-nav li {
+    color: white;
+    cursor: pointer;
+    list-style-type: none;
+    padding: 10px;
+}
+
+#sub-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#sub-nav a:hover {
+    background-color: white;
+    color: black;
 }
 
 .open {
     height: 100vh;
-    width: 150px;
+    width: 200px;
+    margin-left: 0px;
     z-index: 1;
+    transition: margin-left .5s ease;
 }
 
 .closed {
-    height: 0vh;
-    width: 0px;
+    height: 100vh;
+    width: 200px;
+    margin-left: -200px;
+    z-index: 1;
+    transition: margin-left .5s ease;
 }
-
 
 .content {
     margin: 100px;
@@ -135,15 +184,9 @@
     width: 100%;
 }
 
-#collection .item {
-    list-style-type: none;
-    z-index: 1;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    color: blue;
+footer {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
