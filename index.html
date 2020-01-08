@@ -8,17 +8,22 @@
   </head>
   <body>
     <nav id="menu">
-      <div class="menu-icon">
-        <div class="menu-box"></div>
-        <div class="menu-box"></div>
-        <div class="menu-box"></div>
-        <ul id="sub-nav">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SYSTEMS</a></li>
-          <li><a href="#">DEALS</a></li>
-        </ul>
+      <div id="menu-button">
+        <div class="menu-icon">
+          <div class="menu-box"></div>
+          <div class="menu-box"></div>
+          <div class="menu-box"></div>
+        </div>
+        <div id="sub-nav" class="closed">
+          <ul>
+            <li class="exit"><a href="#">X</a></li>
+            <li class="nav-item"><a href="#">HOME</a></li>
+            <li class="nav-item"><a href="#">SYSTEMS</a></li>
+            <li class="nav-item"><a href="#">DEALS</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="main-menu-items">
+      <div class="nav-menu-items">
         <span class="logo-text">LOGO</span>
         <div class="cart">
           <a href="#">cart</a>
@@ -26,6 +31,15 @@
       </div>
     </nav>
     <div id="container">
+      <form id="item-searcher">
+        <input class="systemsInput" type="text" name="item-nav" placeholder="see our systems">
+      </form>
+      <ul id="collection">
+        <li class="item"><a href="#">XBOX</a></li>
+        <li class="item"><a href="#">SWITCH</a></li>
+        <li class="item"><a href="#">PS4</a></li>
+        <li class="item"><a href="#">3DS</a></li>
+      </ul>
       <div class="arrow" id="arrow-left"></div>
       <div id="slider">
         <div class="slide image-1">
@@ -44,7 +58,27 @@
       </div>
       <div class="arrow" id="arrow-right"></div>
     </div>
-    <section class="main-text">
+    <section class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section class="content">
+      <div id="carousel">
+        <div class="carousel-slide">
+          <img src="images/ps4.jpg" id="lastClone">
+          <img src="images/3ds.jpg">
+          <img src="images/xbox.jpg">
+          <img src="images/switch.jpg">
+          <img src="images/ps4.jpg">
+          <img src="images/3ds.jpg" id="firstClone">
+        </div>
+      </div>
+      <button id="prevBtn" class="button">Prev</button>
+      <button id="nextBtn" class="button">Next</button>
+    </section>
+    <section class="content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
