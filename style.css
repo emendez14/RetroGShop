@@ -61,6 +61,20 @@
     display: none;
 }
 
+.buyItem {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.cart-number {
+    color: white;
+    z-index: 1;
+}
+
 .arrow {
     cursor: pointer;
     position: absolute;

@@ -8,6 +8,12 @@ let menuIcon = document.querySelector(".menu-icon"),
     subNav = document.querySelector("#sub-nav"),
     mainText = document.querySelectorAll(".content"),
     closeBtn = document.querySelector(".exit");
+    // cart button and text SELECTORS
+let numberOfCartItems = document.querySelector(".cart-number"),
+    cartItemsNav = document.querySelector(".cart-items-nav"),
+    addToCart = document.querySelectorAll(".buyItem"),
+    removeCartItem = document.querySelectorAll(".remove");
+    items = 1;
     // image slider middle of page SELECTORS
 let carouselSlide = document.querySelector(".carousel-slide"),
     carouselImages = document.querySelectorAll(".carousel-slide img"),
@@ -54,6 +60,17 @@ function filterSystems(e){
         }
     });
 };
+
+    // add to cart functionality 
+addToCart.forEach((item)=> {
+    item.addEventListener("click", function(){
+        numberOfCartItems.textContent = items++;
+        let newItem = document.createElement("li");
+        newItem.classList.add("cart-item");
+        cartItemsNav.appendChild(newItem);
+        newItem.innerHTML = "<a href='#'>XBOX</a><button class='remove'>remove</button>";
+    })
+});
 
     // image slider top LOGIC
 function reset(){
