@@ -64,13 +64,27 @@ function filterSystems(e){
     // add to cart functionality 
 addToCart.forEach((item)=> {
     item.addEventListener("click", function(){
-        numberOfCartItems.textContent = items++;
         let newItem = document.createElement("li");
         newItem.classList.add("cart-item");
         cartItemsNav.appendChild(newItem);
-        newItem.innerHTML = "<a href='#'>XBOX</a><button class='remove'>remove</button>";
+        newItem.innerHTML = "<a href='#' class='item-name'></a><button class='remove'>remove</button>";
+        items = newItem.value;
+        numberOfCartItems.textContent = items;
+        items++;
     })
 });
+
+deleteItem();
+
+function deleteItem(e){
+    document.addEventListener("click", function(e){
+        if(e.target.parentElement.classList.contains("cart-item")){
+            e.target.parentElement.remove();
+            numberOfCartItems.textContent = items;
+            items--;
+        }
+    }
+)};
 
     // image slider top LOGIC
 function reset(){
